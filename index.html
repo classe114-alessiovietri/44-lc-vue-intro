@@ -3,18 +3,69 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Template HTML CSS JS</title>
+        <title>44 LC Vue Intro</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        
-        <h1>
-            Template HTML CSS JS
-        </h1>
 
-        <script src="js/scripts.js" type="text/javascript"></script>
+        <div id="app">
+            <h1>
+                Mi chiamo {{ firstName }}
+            </h1>
+            <h2>
+                {{ lastName }} {{ firstName }}
+            </h2>
+
+            <ul>
+                <li>
+                    Age: {{ age }}
+                </li>
+                <li>
+                    Wears glasses? {{ wearsGlasses }}
+                </li>
+            </ul>
+
+            <!-- <p v-bind:class="pClasses">
+                {{ firstName }}{{ lastName }}
+            </p> -->
+
+            <p
+                v-bind:id="age"
+                class="bg-aquamarine"
+                :class="getPClasses()">
+                {{ firstName }}{{ lastName }}
+            </p>
+
+            <div>
+                <input type="text" v-model="pClasses">
+            </div>
+
+            <div>
+                <textarea @keyup="printTextInConsole()" v-model="text"></textarea>
+            </div>
+
+            <div>
+                <h4>
+                    Pokémon preferito: {{ favPkmn }}
+                </h4>
+                <select v-model="favPkmn">
+                    <option value="char">Charmander</option>
+                    <option value="squ">Squirtle</option>
+                    <option value="bul">Bulbasaur</option>
+                </select>
+            </div>
+
+            <div>
+                <button @click="sayHi()">
+                    Saluta lo user
+                </button>
+            </div>
+        </div>
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="js/scripts.js"></script>
 
     </body>
 </html>

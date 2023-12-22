@@ -10,3 +10,19 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.lightcoral {
+    color: lightcoral;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bordered {
+    border: 5px dashed aqua;
+}
+
+.bg-aquamarine {
+    background-color: aquamarine;
+}
